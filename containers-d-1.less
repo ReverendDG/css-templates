@@ -1,0 +1,142 @@
+// Mixins and actual numbers such as margins and padding can be adjusted per site. The following is only meant to be a template or starting point.
+
+// Container elements based on width of site
+// These are only used for splitting up the page into sections. 
+// Content should not be immediately within these containers, but rather be within a content container within these to provide proper padding and margins.
+// These are meant to be generic classes. Styling such as backgrounds, font-family, etc, should be done with specific named IDs
+.fullwidth{
+    width: 100%;
+	min-width: @site-minwidth;
+	max-width: @site-maxwidth;
+    position: relative;
+}
+
+.halfwidth{
+    width: 50%;
+    position: relative;
+}
+
+.thirdwidth{
+    width: 33%;
+    position: relative;
+}
+
+.quarterwidth{
+    width: 25%;
+    position: relative;
+}
+// Containers/Areas
+body{
+	background: @bgcolor;
+	background-image:url("@{bgImage-1}");//,url("@{bgImage-2}"),url("@{bgImage-3}");
+	background-repeat: repeat-y;// add more for each background - ", repeat";
+	background-attachment: fixed;// add more for each background = ", fixed";
+//	background-position: left, left;
+	padding-left: 150px;
+	font-family: @font-normal;
+	font-size:18px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: @plaintext-color;
+	height:auto;
+	.fullwidth;
+	}
+
+// The outer wrapper of the site. This goes to the outer edges of the page with a 20px margin
+#main-body{ 
+	width: 100%;
+	margin: 0px auto;
+	margin-right: 20px;
+	.fullwidth;
+	}
+
+// The inner content area    
+#main-content{
+	background-color: @bgcolor;
+//	padding: 25px;
+	margin: 5px 0px;
+	display:block;
+	position:relative;
+	clear:both;
+	font-family: @font-normal;
+	font-size: 22px;
+    font-weight: bold;
+    .semi-transparent;
+    .rounded-big;
+	}
+
+// This can be customized by size and float and replicated as needed
+.floatingDiv{ // add "-small", "-medium", "-big", etc, as needed
+	width: 55px;
+	height:25px;
+	margin: 5px 5px 0 0;
+	position: relative;
+//	.float-right;	
+//	.float-left;	
+}
+
+#header{ // The header of the site: Logo/tagline/navigation
+	background-color: @bgcolor;
+	padding: 0px;
+	margin: 5px 0px;
+	display:block;
+	position:relative;
+	clear:both;
+	font-family: @font-normal;
+	font-size: 22px;
+    font-weight: bold;
+    .rounded-big;
+    .semi-transparent;
+	}
+
+#logo{ // Site logo, if applicable
+	position:relative;
+	width: 20%;
+	max-width: 20%;
+	display: inline-block;
+	vertical-align:middle;
+	}
+
+#tagline{ // Site tagline, if applicable
+	text-align:center;
+	font-family: @font-fancy;
+	font-size: 48px;
+	font-style:italic;
+	font-weight:bold;
+	color: @darktextcolor;
+	padding: 0px;
+	min-height: 215px;
+//	display: inline-block;
+	position:relative;
+	width: 70%;
+	max-width: 70%;
+	vertical-align:middle;
+	padding-top: 10px;
+	float: right;
+	p{
+		display: block;
+		vertical-align: middle;
+		text-align: center;
+	}
+}
+
+#footer{ // The footer of site: Copyright info, compressed navigation
+	height: auto;
+	background-color:@lightcolor;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	padding: 5px;	
+	position:relative;
+	color: @darkcolor;
+//	border: 1px solid @lightcolor;
+	margin-bottom: 10px;
+    margin-top: 0;
+    .rounded-small;
+	a{
+		color: @darktextcolor;
+		padding: 0 3px;
+	}
+}
+

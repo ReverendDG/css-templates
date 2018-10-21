@@ -1,0 +1,1002 @@
+/* LESS Document */
+
+@import "vars.less";
+
+
+// Containers/Areas
+body{
+	background: @bgcolor;
+	background-image:url("../images/site_images/backgrounds/lacebg.gif"), url("../images/site_images/backgrounds/burlap03.jpg");
+	background-repeat: repeat-y, repeat;
+	background-attachment: fixed, fixed;
+//	background-position: left, left;
+	padding-left: 150px;
+	font-family: @font_normal;
+	font-size:18px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: @plaintext;
+	height:auto;
+	min-width: @site_minwidth;
+	max-width: @site_maxwidth;
+	}
+
+#main-body{ // The outer wrapper of the site
+	width: 100%;
+	min-width: @site_minwidth;
+	max-width: @site_maxwidth;
+	margin: 0px auto;
+	margin-right: 20px;
+	}
+
+#main-content{
+	background-color: @bgcolor;
+	background:rgba(255,255,255,0.85);
+//	padding: 25px;
+	margin: 5px 0px;
+	display:block;
+	position:relative;
+	clear:both;
+	font-family: @font_normal;
+	font-size: 22px;
+	font-weight: bold;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	}
+
+#bsd{
+	background-image:url("../images/site_images/backgrounds/bsd.gif");
+//	background-repeat: no-repeat;
+//	background-attachment: fixed;
+	background-size: cover;
+	width: 55px;
+	height:25px;
+	float: right;
+	margin: 5px 5px 0 0;
+	position: relative;
+	}
+
+#header{ // The header of the site: Logo/tagline/navigation
+	background-color: @bgcolor;
+	background:rgba(255,255,255,0.85);
+	padding: 0px;
+	margin: 5px 0px;
+	display:block;
+	position:relative;
+	clear:both;
+	font-family: @font_normal;
+	font-size: 22px;
+	font-weight: bold;
+	border-radius: 25px;
+	}
+
+#logo{ // Site logo, if applicable
+	position:relative;
+	width: 20%;
+	max-width: 20%;
+	display: inline-block;
+	vertical-align:middle;
+	}
+
+#tagline{ // Site tagline, if applicable
+	text-align:center;
+	font-family: @font_fancy;
+	font-size: 48px;
+	font-style:italic;
+	font-weight:bold;
+	color: @darktextcolor;
+	padding: 0px;
+	min-height: 215px;
+	display: inline-block;
+	position:relative;
+	width: 70%;
+	max-width: 70%;
+	vertical-align:middle;
+	padding-top: 10px;
+	float: right;
+	p{
+		display: block;
+		vertical-align: middle;
+		text-align: center;
+	}
+}
+
+#footer{ // The footer of site: Copyright info, compressed navigation
+	height: auto;
+	background-color:@lightcolor;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	padding: 5px;	
+	position:relative;
+	color: @darkcolor;
+//	border: 1px solid @lightcolor;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 0;
+	a{
+		color: @darktextcolor;
+		padding: 0 3px;
+	}
+}
+
+.specialoffer{
+	font-family: @font_fancy;
+	color: @darktextcolor;
+	text-align: center;
+	font-size: 150%;
+}
+
+.largefirst::first-letter {
+    font-size: 300%;
+	font-weight:bold;
+	font-family:@font_fancy;
+	color: @darktextcolor;
+	float: left;
+    width: 0.7em;
+    line-height: 80%;	
+}
+//-----------------------------------------------------------------------------------------------------------------
+// Main Page
+#mainmainpage{
+	text-align: left;
+	.mainareacorners;
+}
+
+.placeholder{
+	font-family: @font_fancy;
+	font-size: 72px;
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+// FAQ Page
+
+#mainfaqpage{
+	text-align: center;
+	background-image: url('../images/site_images/backgrounds/cookies01.jpg');
+	background-size: cover;
+	.mainareacorners;
+}
+
+.inquiry{
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	display: block;
+	.rounded;
+	margin: 5px auto;
+	padding: 10px;
+	text-align: left;
+	width: 85%;
+	
+	& .question{
+		display: block;
+		&.open{
+			font-style: italic;
+		}
+	}
+	
+	& .answer{
+		font-weight: normal;
+		display: block;
+		padding: 10px;
+		padding-left: 50px;
+	}
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+// Requests Page
+
+#mainreqpage{
+	text-align: center;
+	background-image: url('../images/site_images/backgrounds/cookies01.jpg');
+	background-size: cover;
+	.mainareacorners;
+	
+	& .contentarea{
+		background-color: @lightcolor;
+		text-align: left;
+		width: 75%;
+		padding: 20px;
+		margin: auto;
+		.rounded;
+	}
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+// Order Page
+
+#mainorderpage{
+	text-align: center;
+	background-image: url('../images/site_images/backgrounds/cookies01.jpg');
+	background-size: cover;
+	.mainareacorners;
+	
+	& .contentarea{
+		background-color: @lightcolor;
+		text-align: left;
+		width: 80%;
+		padding: 20px;
+		margin: auto;
+		.rounded;
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// Product Page
+
+#mainprodpage{
+	text-align: center;
+	background-image: url('../images/site_images/backgrounds/cookies01.jpg');
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+	.mainareacorners;
+}
+
+.product{
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	display: block;
+	.rounded;
+	margin: 20px auto;
+	padding: 10px;
+	text-align: left;
+	width: 75%;
+	
+	& .prodtitle{
+		display: block;
+		font-family: @font_fancy;
+		color: @darktextcolor;
+	}
+	
+	& .proddescription{
+		font-weight: normal;
+		font-style: italic;
+		display: block;
+		padding: 10px;
+		padding-left: 50px;
+	}
+	
+	& .prodprice{
+		font-weight: normal;
+		font-style: italic;
+	}
+}
+
+#productsubnav{
+	.rounded;
+	background-color: @lightcolor;
+	font-family: @font_fancy;
+	padding: 5px 10px;
+	width: 50%;
+	margin: 5px auto;
+}
+
+#platters{
+	display: none;
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	.rounded;
+	margin: 20px auto;
+	padding: 10px;
+	text-align: left;
+	width: 75%;
+}
+
+#giftcert{
+	display: none;
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	.rounded;
+	margin: 20px auto;
+	padding: 10px;
+	text-align: left;
+	width: 75%;
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// Testimonial Page
+
+#maintestpage{
+	text-align: center;
+	background-image: url('../images/site_images/backgrounds/cookies01.jpg');
+	background-size: cover;
+	.mainareacorners;
+}
+
+.blurb{
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	display: inline-block;
+	.rounded;
+	margin: 10px;
+	padding: 10px;
+	font-style: italic;
+	font-weight: normal;
+	max-width: 30%;
+	vertical-align: top;
+	
+	& .testi-text{
+		text-align: left;
+	}
+	
+	& .testi-name{
+		width: 100%;
+		position: relative;
+		display: block;
+		text-align: right;
+	}
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+// Picture Galleries
+#maingallerypage{
+	width: 95%;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: center;
+}
+
+.galleryPic{
+	width: 200px;
+	height: 300px;
+	min-width: 200px;
+	min-height: 300px;
+	max-width: 200px;
+	max-height: 300px;
+	display: inline-block;
+	margin: 10px;
+	padding: 0px 0px 0px 0px;
+	overflow: hidden;
+	background-repeat: none;
+	background-size: cover;
+	background-position: center;
+	.bordered-dark;
+	.rounded;
+}
+
+#outerPictureDisplay{
+	z-index: 500;
+	top: 50px;
+	left: 50%;
+	padding: 0px;
+	position: fixed;
+}
+
+#innerPictureDisplay{
+	left: -50%;
+	min-height: 200px;
+	height: auto;
+	max-height: 600px;
+	width: auto;
+	padding: 0px;
+	position: relative;
+    overflow: auto;
+	background-color: @lightcolor;
+	.bordered-dark;
+	.rounded;
+	& img{
+		margin: 0px;
+		}
+}
+
+#divClose{
+	font-size: 1em;
+	background-color: @darkcolor;
+	color: @lighttextcolor;
+	position: relative;
+	padding: 5px;
+}
+
+#picNav{
+	display: inline-block;
+	padding: 0 5px;
+}
+
+#siteCover{
+	width: 100%;
+	height: 100%;
+	background:rgba(0, 0, 0, 0.7);
+	z-index: 450;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+	
+// END Containers/Areas
+// -----------------------------------------
+// -----------------------------------------
+// Text / Links
+a{
+	color: @darkcolor;
+	text-decoration: none;	
+}
+
+a[ng-click]{
+    cursor: pointer;
+}
+
+.fancy{
+	font-family: @font_fancy;
+}
+
+.brown{
+ color: @darktextcolor;
+}
+
+// END Text / Links
+// -----------------------------------------
+// Visibility
+.hide_big{
+	display: none;
+	}
+
+.hide_big_inline{
+	display: none;
+	}
+
+// END Visibility
+// -----------------------------------------
+// Images
+img{
+	max-width: 100%;
+	height:auto;
+	width:auto;
+	margin: 5px;
+	}
+	
+.right_picture{
+	float:right;
+	}
+	
+.left_picture{
+	float: left;
+	}
+// END Images
+// -----------------------------------------
+
+// Effects
+.shadowed{
+	-moz-box-shadow: 10px 10px 5px #333;
+	-webkit-box-shadow: 10px 10px 5px #333;
+	box-shadow: 10px 10px 5px #333;
+}
+
+.floatNone{
+	float: none;
+	}
+		
+.floatLeft{
+	float: left;
+	}	
+	
+.floatRight{
+	float: right;
+	}
+
+.centerAlign{
+	text-align: center;
+	}
+		
+.leftAlign{
+	text-align: left;
+	}
+		
+.rightAlign{
+	text-align: right;
+	}
+		
+
+// Responsive section
+// ----------------------------------------------------------------------------------------
+@media screen and (min-device-width: 767px) and (max-device-width: 1280px){ // Tablet Section
+	body{
+//	background-image:url("../images/site_images/backgrounds/mobilebg.png");
+	background-image:url("../images/site_images/backgrounds/burlap03.jpg");
+	background-repeat: repeat;
+	min-width: 767px;
+	max-width: 100%;
+	padding-left: 0px;
+	}
+	
+	// Containers/Areas
+	.main-body{
+		min-width: 767px;
+		max-width: 100%;
+		margin: 0px 0px;;
+		}
+
+	#logo{
+//		width: 100%;
+//		max-width: 100%;
+//		text-align:center;
+		}
+	
+	#tagline{
+//		width: 100%;
+//		max-width: 100%;
+//		text-align:center;
+//		height: 50px;
+//		padding-top: 0px;
+//		float: none;
+//		font-size: 36px;
+
+	}
+	// END Containers/Areas
+	
+	.buttoned{
+		margin: 0 0 !important;
+		border: solid 0px @lightcolor !important;
+		display: block !important;
+	}
+
+
+	.layout_one{
+		& .c1{ 
+			width: 100%;
+		}
+		& .c2, .c3, .c4, .c5 {
+			width: 50%;
+		}
+	}
+	
+	.layout_two {
+		.c1 {
+			width: 60%;
+			-webkit-order: 2;
+			order: 2;
+		}
+		
+		.c2 {
+			width: 40%;
+			-webkit-order: 1;
+			order: 1;
+		}
+		
+		.c3 {
+			width: 100%;
+			-webkit-order: 3;
+			order: 3;
+		}
+	}
+
+	.layout_sample{
+		width: 45%;
+	}
+
+}
+//----------------------------------------------------------------------------------------------
+@media screen and (min-width: 320px) and (max-width: 640px) { // Mobile Section
+
+	body{
+	background-image:url("../images/site_images/backgrounds/burlap03.jpg");
+	background-repeat: repeat;
+	min-width: 320px;
+	max-width: 100%;
+	padding-left: 0px;
+	}
+	
+	// Containers/Areas
+	.main-body{
+		min-width: 320px;
+		max-width: 100%;
+		margin: 0px 0px;;
+		}
+	#main-content{
+		font-size: 16px;
+		font-weight: normal;
+	}
+	
+	#logo{
+		width: 100%;
+		max-width: 100%;
+		text-align:center;
+		}
+	
+	#tagline{
+		width: 100%;
+		max-width: 100%;
+		text-align:center;
+		height: 50px;
+		min-height: 50px;
+		padding-top: 0px;
+		float: none;
+		font-size: 16px;
+
+	}
+	.layout_one{
+		& .c1, .c2, .c3, .c4, .c5 {
+			width: 100%;
+		}
+	}
+	
+	.layout_two {
+		& .c1, .c2, .c3 {
+			width: 100%;
+		}
+	}
+	
+	.layout_three {
+		& .c1, .c2, .c3, .c4 {
+			width: 100%;
+		}
+	}
+	
+	.layout_sample{
+		width: 100%;
+	}
+
+	// Navigation
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
+		
+ul.nav {
+    top: 10px;
+    left: 0px;
+    height: 52px;
+    background-color:@darkcolor;
+    font-size:12px;
+    font-weight:bold;
+    margin: auto;
+	margin-left: 0px;
+    border: 1px solid @lightcolor;
+    width: 100%;
+    padding: 0px;
+	padding-left: 0px;
+    list-style: none;
+    color: @lighttextcolor;
+    text-align:center;
+    display: none;
+    & > li {
+        padding: 0px;
+		padding-left: 0px;
+        text-transform: uppercase;
+		background-image: none;
+        background-color:@darkcolor;
+        color: @lighttextcolor;
+		border-radius: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border: 0px !important;
+		border-top: 1px solid @lightcolor !important;
+//		border-bottom: 1px solid @lightcolor;
+        vertical-align:middle;
+        line-height: 52px;
+        width: 100%;
+        display: block;
+        position: relative;
+        text-align: center;
+        z-index: 999;
+		margin: 0px !important;
+		&.chosen{
+			background-image: none;
+			color: @lighttextcolor;
+			a{
+				color: @lighttextcolor;
+			}
+		}
+
+		&.short{
+			background-image: none;
+			width: 100%;
+			&.chosen{
+				background-image: none;
+				color: @lighttextcolor;
+				a{
+					color: @lighttextcolor;
+				}
+			}
+		}
+        a {
+            display: block;
+            color: @lighttextcolor;
+            text-decoration: none;
+            padding: 0px 0px;
+        }
+    }
+    li {
+		background-image: none;
+        a:hover {
+            color: @darktextcolor;
+            background: @lightcolor;
+        }
+        ul.dropdown {
+            width: 200px;
+            min-width: 200px;
+            background-color: @lightcolor;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            text-align:left;
+            padding: 0px;
+            //	border: solid 1px @darkcolor;
+            a {
+                width: 188px;
+                min-width: 188px;
+                background-color: @lightcolor;
+                color: @darktextcolor;
+
+                padding: 0px 5px;
+            }
+            a:hover {
+                color: @lighttextcolor;
+
+                background: @darkcolor;
+                //	padding: 0px;
+            }
+            li {
+                background-color: @lightcolor;
+                margin-left: 0px;
+                display: block;
+                text-align:left;
+                padding-left: 0px;
+                padding-right: 0px;
+                line-height: 25px;
+                border: solid 1px @darkcolor;
+            }
+            li:last-child {
+                border-bottom: solid 1px @darkcolor;
+            }
+        }
+        ul.dropdown-wide {
+            width: 250px;
+            min-width: 250px;
+            background-color: @lightcolor;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            text-align:left;
+            padding: 0px;
+            border: solid 1px @darkcolor;
+            a {
+                width: 240px;
+                min-width: 240px;
+                background-color: @lightcolor;
+                color: @darktextcolor;
+
+                padding: 0px 5px;
+            }
+            a:hover {
+                color: @lighttextcolor;
+
+                background: @darkcolor;
+                //	padding: 0px;
+            }
+            li {
+                background-color: @lightcolor;
+                margin-left: 0px;
+                display: block;
+                text-align:left;
+                padding-left: 0px;
+                line-height: 25px;
+                border-bottom: solid 1px @darkcolor;
+            }
+            li:last-child {
+                border-bottom: 0px;
+            }
+        }
+    }
+    li.active {
+        color: @darktextcolor;
+        background: @lightcolor;
+        a {
+            color: @darktextcolor;
+        }
+    }
+    li:hover {
+        ul.dropdown {
+            display:none;
+        }
+        ul.dropdown-wide {
+            display:none;
+        }
+    }
+}
+
+	.hide_big{
+		display: block;
+		}
+	
+	.hide_big_inline{
+		display: inline;
+		}
+	
+	.hide_small{
+		display:none;
+		}
+
+// FAQ Page
+
+#mainfaqpage{
+	text-align: center;
+	background-image:none;
+	background-size: cover;
+	.mainareacorners;
+}
+
+.inquiry{
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	display: block;
+	.rounded;
+	margin: 5px auto;
+	padding: 5px;
+	text-align: left;
+	width: 100%;
+	
+	& .question{
+		display: block;
+		&.open{
+			font-style: italic;
+			font-weight: bold;
+		}
+	}
+	
+	& .answer{
+		font-weight: normal;
+		display: block;
+		padding: 10px;
+		padding-left: 20px;
+	}
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+// Requests Page
+
+#mainreqpage{
+	text-align: center;
+	background-image: none;
+	background-size: cover;
+	.mainareacorners;
+	
+	& .contentarea{
+		background-color: @lightcolor;
+		text-align: left;
+		width: 100%;
+		padding: 5px;
+		margin: auto;
+		.rounded;
+	}
+}
+//-----------------------------------------------------------------------------------------------------------------
+
+// Order Page
+
+#mainorderpage{
+	text-align: center;
+	background-image: none;
+	background-size: cover;
+	.mainareacorners;
+	
+	& .contentarea{
+		background-color: @lightcolor;
+		text-align: left;
+		width: 100%;
+		padding: 5px;
+		margin: auto;
+		.rounded;
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// Product Page
+
+#mainprodpage{
+	text-align: center;
+	background-image:none;
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+	.mainareacorners;
+}
+
+.product{
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	display: block;
+	.rounded;
+	margin: 20px 0px;
+	padding: 10px;
+	text-align: left;
+	width: 95%;
+	
+	& .prodtitle{
+		display: block;
+		font-family: @font_fancy;
+		color: @darktextcolor;
+	}
+	
+	& .proddescription{
+		font-weight: normal;
+		font-style: italic;
+		display: block;
+		padding: 10px;
+		padding-left: 50px;
+	}
+	
+	& .prodprice{
+		font-weight: normal;
+		font-style: italic;
+	}
+}
+
+#productsubnav{
+	.rounded;
+	background-color: @lightcolor;
+	font-family: @font_fancy;
+	padding: 5px 5px;
+	width: 90%;
+}
+
+#platters{
+	display: none;
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	.rounded;
+	margin: 5px auto;
+	padding: 5px;
+	text-align: left;
+	width: 100%;
+}
+
+#giftcert{
+	display: none;
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	.rounded;
+	margin: 5px auto;
+	padding: 5px;
+	text-align: left;
+	width: 100%;
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// Testimonial Page
+
+#maintestpage{
+	text-align: center;
+	background-image:none;
+	background-size: cover;
+	.mainareacorners;
+}
+
+.blurb{
+	border: 1px solid @darkcolor;
+	background-color: @lightcolor;
+	display: inline-block;
+	.rounded;
+	margin: 5px;
+	padding: 5px;
+	font-style: italic;
+	font-weight: normal;
+	max-width: 100%;
+	width: 100%;
+	vertical-align: top;
+	
+	& .testi-text{
+		text-align: left;
+	}
+	
+	& .testi-name{
+		width: 100%;
+		position: relative;
+		display: block;
+		text-align: right;
+	}
+}
+
+
+}

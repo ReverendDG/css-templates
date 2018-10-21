@@ -1,0 +1,67 @@
+//Mixins
+.rounded-small{ // Slightly rounded corners
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.rounded-big{ // Very rounded corners
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	padding: 25px;
+}
+
+.squared{ // Squared corners
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+
+.shadowed{ // Standard shadow (bottom/right)
+	-moz-box-shadow: 10px 10px 5px @shadow-color;
+	-webkit-box-shadow: 10px 10px 5px @shadow-color;
+	box-shadow: 10px 10px 5px @shadow-color;
+}
+
+// If you need to customize the shadow, use a combination of the following
+.shadowed-bottom{ // Bottom shadow
+	-moz-box-shadow: 0px 10px 5px @shadow-color;
+	-webkit-box-shadow: 0px 10px 5px @shadow-color;
+	box-shadow: 0px 10px 5px @shadow-color;
+}
+
+.shadowed-top{ // Top shadow
+	-moz-box-shadow: 0px -10px 5px @shadow-color;
+	-webkit-box-shadow: 0px -10px 5px @shadow-color;
+	box-shadow: 0px -10px 5px @shadow-color;
+}
+
+.shadowed-right{ // Right shadow
+	-moz-box-shadow: 10px 0px 5px @shadow-color;
+	-webkit-box-shadow: 10px 0px 5px @shadow-color;
+	box-shadow: 10px 0px 5px @shadow-color;
+}
+
+.shadowed-left{ // Left shadow
+	-moz-box-shadow: -10px 0px 5px @shadow-color;
+	-webkit-box-shadow: -10px 0px 5px @shadow-color;
+	box-shadow: -10px 0px 5px @shadow-color;
+}
+
+.buttoned{
+	margin: 0 5px !important;
+	border: solid 2px @lightcolor !important;
+	display: inline-block !important;
+}
+
+.bordered-light{
+	border: 1px solid @lightcolor;
+}
+
+.bordered-dark{
+	border: 1px solid @darkcolor;
+}
+
+.semi-transparent{
+	background:rgba(255,255,255,0.85);
+}

@@ -1,0 +1,205 @@
+// Navigation
+ul.nav { // Main navigation section == <ul class="nav">
+    top: 10px;
+    left: 0px;
+    height: @nav-ht;
+    background-color:@lightcolor;
+	font-family: @font_fancy;
+    font-size:11px;
+    font-weight:bold;
+    margin: 15px auto;
+	box-sizing: content-box;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    color: @lighttextcolor;
+    text-align:center;
+    display: table;
+    z-index: 20;
+	&.disappear{
+		background-color: @bgcolor;
+		border-color: @bgcolor;
+		}
+    & > li { // Primary navigational item == <ul class="nav"><li>
+        padding-left: 10px;
+        text-transform: uppercase;
+		background-image: url('@{nav-image-off-1}');
+		background-repeat: no-repeat;
+//        background-color:@darkcolor;
+        color: @darktextcolor;
+        vertical-align:middle;
+        line-height: @nav-ht;
+        width: @nav-wd;
+        display: table-cell;
+        position: relative;
+        text-align: center;
+		.buttoned;
+		
+		&.chosen{ // Selected primary navigational item: e.g.: the "About" button while on the "About" page.
+			background-image: url('@{nav-image-on-1}');
+			color: @lighttextcolor;
+			a{
+				color: @lighttextcolor;
+			}
+		}
+
+		&.short{ // Customized narrower primary navigational item
+			background-image: url('@{nav-image-off-2}');
+			width: @nav-wd-2;
+		    font-size:12px;
+			&.chosen{
+				background-image: url('@{nav-image-on-2}');
+				color: @lighttextcolor;
+				a{
+					color: @lighttextcolor;
+				}
+			}
+		}
+		
+        a { // Link within the primary navigational item
+            display: block;
+            color: @darktextcolor;
+            text-decoration: none;
+            padding: 0px 8px;
+        }
+    }
+    li { // This affects the <li> tags within the nav that aren't an immediate child of <ul class="nav">
+        a:hover {
+            color: @darktextcolor;
+       }
+        ul.dropdown {
+            width: 200px;
+            min-width: 200px;
+            background-color: @lightcolor;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            text-align:left;
+            padding: 0px;
+            //	border: solid 1px @darkcolor;
+            a {
+                width: 188px;
+                min-width: 188px;
+                background-color: @lightcolor;
+                color: @darktextcolor;
+
+                padding: 0px 5px;
+            }
+            a:hover {
+                color: @lighttextcolor;
+
+                background: @darkcolor;
+                //	padding: 0px;
+            }
+            li {
+                background-color: @lightcolor;
+                margin-left: 0px;
+                display: block;
+                text-align:left;
+                padding-left: 0px;
+                padding-right: 0px;
+                line-height: 25px;
+                border: solid 1px @darkcolor;
+            }
+            li:last-child {
+                border-bottom: solid 1px @darkcolor;
+            }
+        }
+        ul.dropdown-wide {
+            width: 250px;
+            min-width: 250px;
+            background-color: @lightcolor;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            text-align:left;
+            padding: 0px;
+            border: solid 1px @darkcolor;
+            a {
+                width: 240px;
+                min-width: 240px;
+                background-color: @lightcolor;
+                color: @darktextcolor;
+
+                padding: 0px 5px;
+            }
+            a:hover {
+                color: @lighttextcolor;
+
+                background: @darkcolor;
+                //	padding: 0px;
+            }
+            li {
+                background-color: @lightcolor;
+                margin-left: 0px;
+                display: block;
+                text-align:left;
+                padding-left: 0px;
+                line-height: 25px;
+                border-bottom: solid 1px @darkcolor;
+            }
+            li:last-child {
+                border-bottom: 0px;
+            }
+        }
+    }
+    li.active {
+		background-image: url('@{nav-image-on-1}');
+		&.short{
+			background-image: url('@{nav-image-on-2}');
+		}
+        a {
+            color: @lighttextcolor;
+
+        }
+    }
+    li:hover {
+		background-image: url('@{nav-image-on-1}');
+		&.short{
+			background-image: url('@{nav-image-on-2}');
+		}
+        a {
+            color: @lighttextcolor;
+        }
+       ul.dropdown {
+            display: block;
+        }
+        ul.dropdown-wide {
+            display: block;
+        }
+    }
+}
+
+// Style 'show menu' label button and hide it by default
+// This is for the responsive menu aspects
+.show-menu {
+	top: 10px;
+	left: 0px;
+	height: 20px;
+	background-color:@darkcolor;
+	font-size:16px;
+	font-weight:bold;
+	margin: 0px auto;
+	border: 1px solid @lightcolor;
+	width: 100%;
+	list-style: none;
+	color: @lightcolor;
+	text-align:center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]#show-menu{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ ul.nav{
+    display: block;
+}
+// END responsive piece
+
+// END Navigation
